@@ -8,7 +8,6 @@ A machine learning-based fraud detection system built with a Random Forest Class
 - [Project Overview 🌟](#-project-overview)
 - [Dataset 📊](#-dataset)
 - [Features 🔍](#-features)
-- [Installation ⚙️](#️-installation)
 - [Preprocessing Steps 🧹](#-preprocessing-steps)
 - [Model Training 🤖](#-model-training)
 - [Evaluation 📈](#-evaluation)
@@ -71,20 +70,6 @@ The dataset (`Fraud.csv`) is a synthetic financial transaction log, simulating p
 
 ---
 
-## ⚙️ Installation
-Clone the repository:
-git clone https:///github.com/yourusername/fraud-detection-repo.git
-cd fraud-detection-repo
--Install dependencies
-pip install -r requirements.txt
--requirements
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-imbalanced-learn
----
 ## 🧹 Preprocessing Steps
 - **Load Data**: Using `pandas`  
 - **EDA**:  
