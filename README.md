@@ -9,7 +9,6 @@ A machine learning-based fraud detection system built with a Random Forest Class
 - [Dataset 📊](#-dataset)
 - [Features 🔍](#-features)
 - [Installation ⚙️](#️-installation)
-- [Usage 🚀](#-usage)
 - [Preprocessing Steps 🧹](#-preprocessing-steps)
 - [Model Training 🤖](#-model-training)
 - [Evaluation 📈](#-evaluation)
@@ -75,8 +74,90 @@ The dataset (`Fraud.csv`) is a synthetic financial transaction log, simulating p
 ---
 
 ## ⚙️ Installation
-
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fraud-detection-repo.git
+git clone https:////github.com/yourusername/fraud-detection-repo.git
 cd fraud-detection-repo
+-Install dependencies
+pip install -r requirements.txt
+-requirements
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+imbalanced-learn
+---
+## 🧹 Preprocessing Steps
+- **Load Data**: Using `pandas`  
+- **EDA**:  
+  - Summary statistics (`describe()`)  
+  - Check for missing values (✅ none found)  
+  - Visualize fraud distribution  
+- **Feature Engineering**:  
+  - Drop irrelevant columns  
+  - One-hot encode `type`  
+  - Standardize `amount` → `z_amount` using `StandardScaler`  
+- **Train-Test Split**: 80/20 split  
+- **Handle Imbalance**: Apply **SMOTE** to oversample fraud class in training data  
+
+---
+
+## 🤖 Model Training
+- **Algorithm**: Random Forest Classifier (`n_estimators=100, random_state=42`)  
+- **Training**: Fit on **SMOTE-balanced** training data  
+- **Why Random Forest?**  
+  - Handles non-linear relationships  
+  - Provides feature importance  
+  - Effective for imbalanced datasets  
+
+ROC-AUC Score: 0.9896149688518895
+
+Classification Report:
+              precision    recall  f1-score   support
+0                 1.00      1.00      1.00   1270904
+1                 0.89      0.85      0.87      1620
+
+accuracy                           1.00   1272524
+macro avg          0.94      0.92      0.93   1272524
+weighted avg       1.00      1.00      1.00   1272524
+
+[[1270752    152]
+ [    247   1373]]
+---
+## 🔝 Feature Importance
+
+Top features contributing to fraud prediction:
+
+| Feature        | Importance |
+|----------------|------------|
+| oldbalanceOrg  | 0.297      |
+| z_amount       | 0.142      |
+| amount         | 0.136      |
+| type_TRANSFER  | 0.120      |
+| type_CASH_OUT  | 0.094      |
+| step           | 0.087      |
+| oldbalanceDest | 0.074      |
+| type_PAYMENT   | 0.050      |
+| type_DEBIT     | 0.000      |
+| isFlaggedFraud | 0.000      |
+
+📊 Bar plot visualization is available in the notebook.
+
+---
+
+## 🎯 Results
+- ✅ Detects **~85% of fraud cases** with minimal false positives  
+- 💡 **Key Insight**: Fraudulent transactions often involve **TRANSFER** or **CASH_OUT** with high amounts draining originator accounts  
+- ⚠️ **Limitation**: Dataset is synthetic; real-world deployment requires further validation  
+
+**Future Improvements**:  
+- Experiment with **deep learning** (e.g., Autoencoders)  
+- Try ensemble methods like **XGBoost** or **LightGBM**  
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+
+
