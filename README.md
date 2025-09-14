@@ -75,8 +75,7 @@ The dataset (`Fraud.csv`) is a synthetic financial transaction log, simulating p
 
 ## ⚙️ Installation
 Clone the repository:
-```bash
-git clone https:////github.com/yourusername/fraud-detection-repo.git
+git clone https:///github.com/yourusername/fraud-detection-repo.git
 cd fraud-detection-repo
 -Install dependencies
 pip install -r requirements.txt
