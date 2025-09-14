@@ -95,18 +95,19 @@ The dataset (`Fraud.csv`) is a synthetic financial transaction log, simulating p
 
 ROC-AUC Score: 0.9896149688518895
 
-Classification Report:
-              precision    recall  f1-score   support
-0                 1.00      1.00      1.00   1270904
-1                 0.89      0.85      0.87      1620
 
-accuracy                           1.00   1272524
-macro avg          0.94      0.92      0.93   1272524
-weighted avg       1.00      1.00      1.00   1272524
+## 📊 Classification Report  
 
-[[1270752    152]
- [    247   1373]]
+| Metric        | Precision | Recall | F1-Score | Support   |
+|---------------|-----------|--------|----------|-----------|
+| Class 0       | 0.9996    | 0.9999 | 0.9998   | 1,270,881 |
+| Class 1       | 0.9457    | 0.7212 | 0.8184   | 1,643     |
+| Accuracy      | -         | -      | 0.9996   | 1,272,524 |
+| Macro Avg     | 0.9727    | 0.8606 | 0.9091   | 1,272,524 |
+| Weighted Avg  | 0.9996    | 0.9996 | 0.9996   | 1,272,524 |
+
 ---
+
 ## 🔝 Feature Importance
 
 Top features contributing to fraud prediction:
