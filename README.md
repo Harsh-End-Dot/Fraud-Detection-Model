@@ -14,8 +14,6 @@ A machine learning-based fraud detection system built with a Random Forest Class
 - [Evaluation 📈](#-evaluation)
 - [Feature Importance 🔝](#-feature-importance)
 - [Results 🎯](#-results)
-- [Contributing 🤝](#-contributing)
-- [License 📜](#-license)
 
 ---
 
@@ -150,13 +148,8 @@ Top features contributing to fraud prediction:
 - 💡 **Key Insight**: Fraudulent transactions often involve **TRANSFER** or **CASH_OUT** with high amounts draining originator accounts  
 - ⚠️ **Limitation**: Dataset is synthetic; real-world deployment requires further validation  
 
-**Future Improvements**:  
-- Experiment with **deep learning** (e.g., Autoencoders)  
-- Try ensemble methods like **XGBoost** or **LightGBM**  
-
 ---
 
-## 🤝 Contributing
-Contributions are welcome!  
+
 
 
